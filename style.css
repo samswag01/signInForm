@@ -1,0 +1,186 @@
+:root {
+	--display-width: 35%;
+	--caption-bg: #F5F5F5DB ;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Now padding and border are calculate with the total width and height */
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	/* border: 1px solid red; */
+}
+@font-face {
+	font-display: swap;
+	font-family: "Norse Bold";
+	font-style: normal;
+	font-weight: 300;
+	src: url("C:/BReached/Fonts/Norse/Norse-Bold.otf");
+}
+
+.display {
+	float: left;
+	width: var(--display-width);
+	overflow: hidden;
+}
+.display__img {
+	width: 100%;
+	position: relative;
+	object-fit: contain;
+}
+.display__odin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 23%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	width: var(--display-width);
+}
+.display__odin img {
+	width: 90px;
+}
+.display__odin p {
+	color: #fff;
+	font-family: "Norse Bold";
+	font-size: 70px; /* Width of the ODIN beside the logo */
+}
+
+.form-section {
+	float: left;
+	width: calc(100% - var(--display-width));
+}
+.form-section__caption {
+	background-color: var(--caption-bg);
+	font-weight: 600;
+	padding: 120px 100px 60px 40px;
+}
+.caption--break {
+	display: block;
+}
+.form {
+	padding: 0 0 20px 40px;
+	box-shadow: 0px 4px 4px #999393DB; /* x y spread color */
+}
+.form__hero {
+	margin: 20px 0 10px 0;
+	font-weight: 600;
+	color: #646363;
+}
+.form__outer {
+	display: flex;
+	gap: 50px;
+	padding: 10px 0;
+}
+.form__inner {
+	display: flex;
+	flex-direction: column;
+}
+.form__inner label {
+	font-size: 13px;
+	margin-bottom: 3px;
+}
+
+/* FORM INPUT */
+.form__inner input {
+	width: 250px;
+	padding: 0 10px;
+	font-size: 15px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: none;
+	border-radius: 3px;
+}
+.form__inner input:focus {
+	border: 1px solid blue;
+	box-shadow: 3px 3px 5px #ADA7A7DB; /* x y spread color */
+}
+
+.form__submit {
+    margin-top: 25px;
+}
+.form__submit input {
+	width: 180px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #596d48;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+}
+.login {
+    margin-top: 15px;
+}
+a {
+    color: #596d48;
+    font-weight: bold;
+}
+.submit__outer {
+    padding: 15px 0 0 40px;
+    background-color: var(--caption-bg);
+    height: 25vh;
+}
+.invalid-input:invalid {
+	border: 1px solid red;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 0;
+	display: none;
+}
+.error.active {
+	display: block;
+}
+
+/* CSS SOLUTION TO REQUIRED FIELD AUTO VALIDATION */
+/* input#email:not(:placeholder-shown):invalid {
+	border: 1px solid red;
+} */
+
+@media only screen and (max-width: 700px) {
+	.display {
+		display: none;
+    }
+    .form {
+        width: 100%;
+    }
+	.form__hero {
+        margin-bottom: 20px;
+	}
+	.form-section {
+		float: none;
+		width: 100%;
+	}
+	.form-section__caption {
+		padding: 40px;
+		font-size: 16px;
+	}
+	.form__outer {
+        display: initial;
+    }
+    .form__inner {
+        margin: 0 30px 15px 0;
+    }
+	.caption--break {
+		display: inline;
+	}
+	.caption__action {
+		display: block;
+    }
+    
+    .form__inner input {
+        width: 100%;
+        height: 35px;
+    }
+    .form__inner label {
+        font-size: 15px;
+    }
+
+}

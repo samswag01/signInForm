@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <section class="display">
+            <img class="display__img" src="images/flower.jpg" alt="">
+            <div class="display__odin">
+                <img src="images/odin-lined.png" alt="">
+                <p>ODIN</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-section__caption">
+                <p>
+                    <!-- These are just for the purpose of styling to maintain consistency in mobile and
+                    desktop version -->
+                    This is not a real online service! You know you need something
+                    <span class="caption--break">
+                        like this in your life to help you realize your deepest dreams.
+                    </span>
+                    <span class="caption__action">Sign up <em>now</em> to get started.</span>
+                </p>
+                <br>
+                <p>You know you want to.</p>
+            </div>
+
+            <form method="POST" name="main" class="form" id="main">
+                <p class="form__hero">Let's do this!</p>
+                
+                <div class="form__outer">
+                    <div class="form__inner">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form__inner">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                </div>
+
+                <div class="form__outer">
+                    <div class="form__inner">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                    </div>
+                    <div class="form__inner">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="number" id="phone-number" name="phone-number">
+                    </div>
+                </div>
+
+                <div class="form__outer">
+                    <div class="form__inner">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form__inner">
+                        <label for="password-conf">CONFIRM PASSWORD</label>
+                        <input type="password" id="password-conf" name="password-conf" required>
+                        <div class="error">* Passwords do not match</div>
+                    </div>
+                </div>
+            </form>
+            <section class="submit__outer">
+                <div class="form__submit">
+                    <input type="submit" value="Create Account" form="main">
+                </div>
+                <div class="login">
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
