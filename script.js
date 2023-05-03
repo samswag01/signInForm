@@ -19,6 +19,5 @@ pwConf.addEventListener('input', (event) => {
 document.querySelectorAll('.form__inner input').forEach(input => {
     input.addEventListener('focus', event => {
         event.target.classList.add('invalid-input');
-        event.target.removeEventListener();
-    });
+    }, {capture: false, once: true});
 });
