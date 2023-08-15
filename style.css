@@ -15,28 +15,28 @@
 	font-family: "Norse Bold";
 	font-style: normal;
 	font-weight: 300;
-	src: url("C:/BReached/Fonts/Norse/Norse-Bold.otf");
+	src: url("./fonts/Norse-Bold.otf");
+}
+
+.main {
+  display: flex;
 }
 
 .display {
-	float: left;
-	width: var(--display-width);
-	overflow: hidden;
-}
-.display__img {
-	width: 100%;
-	position: relative;
-	object-fit: contain;
+  background: url(./images/flower.jpg);
+  width: 100%;
+  /*height: 100vh;*/
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .display__odin {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	top: 23%;
 	background-color: rgba(0, 0, 0, 0.5);
-	overflow: hidden;
-	width: var(--display-width);
+	width: 100%
 }
 .display__odin img {
 	width: 90px;
@@ -44,12 +44,12 @@
 .display__odin p {
 	color: #fff;
 	font-family: "Norse Bold";
-	font-size: 70px; /* Width of the ODIN beside the logo */
+	font-size: 60px; /* Width of the ODIN beside the logo */
 }
 
 .form-section {
-	float: left;
-	width: calc(100% - var(--display-width));
+	width: 100%;
+
 }
 .form-section__caption {
 	background-color: var(--caption-bg);
@@ -70,7 +70,7 @@
 }
 .form__outer {
 	display: flex;
-	gap: 50px;
+	gap: 40px;
 	padding: 10px 0;
 }
 .form__inner {
@@ -145,14 +145,26 @@ a {
 } */
 
 @media only screen and (max-width: 700px) {
+	.main {
+	  display: block;
+	  flex-direction: column;
+	}
 	.display {
-		display: none;
-    }
-    .form {
-        width: 100%;
-    }
+		height: 40vh;
+  }
+  .display__odin img {
+	  width: 70px;
+  }
+  .display__odin p {
+	  color: #fff;
+	  font-family: "Norse Bold";
+	  font-size: 45px; /* Width of the ODIN beside the logo */
+  }
+  .form {
+    width: 100%;
+  }
 	.form__hero {
-        margin-bottom: 20px;
+    margin-bottom: 20px;
 	}
 	.form-section {
 		float: none;
@@ -163,24 +175,24 @@ a {
 		font-size: 16px;
 	}
 	.form__outer {
-        display: initial;
-    }
-    .form__inner {
-        margin: 0 30px 15px 0;
-    }
+    display: initial;
+  }
+  .form__inner {
+    margin: 0 30px 15px 0;
+  }
 	.caption--break {
 		display: inline;
 	}
 	.caption__action {
 		display: block;
-    }
+  }
     
-    .form__inner input {
-        width: 100%;
-        height: 35px;
-    }
-    .form__inner label {
-        font-size: 15px;
-    }
+  .form__inner input {
+    width: 100%;
+    height: 35px;
+  }
+  .form__inner label {
+    font-size: 15px;
+  }
 
 }
